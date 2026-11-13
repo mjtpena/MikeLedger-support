@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Support | MikeLedger</title>
+<meta name="description" content="Getting started with MikeLedger, answers to common questions, and where to report a problem or a wrong answer.">
+<link rel="icon" href="assets/favicon-32.png" sizes="32x32">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site">
+  <div class="wrap">
+    <a class="mark" href="./"><img src="assets/icon-64.png" alt="">MikeLedger</a>
+    <nav class="site" aria-label="Site">
+      <a href="./#what">What it does</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="support.html" aria-current="page">Support</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="wrap">
+  <h1 class="page">Support</h1>
+  <p class="sub">How to get started, answers to common questions, and where to report a problem or an answer the app got wrong.</p>
+
+  <nav class="toc" aria-label="On this page">
+    <strong>On this page</strong>
+    <ol>
+      <li><a href="#help">Get help</a></li>
+      <li><a href="#report">Report an answer</a></li>
+      <li><a href="#start">Getting started</a></li>
+      <li><a href="#keys">Getting around</a></li>
+      <li><a href="#questions">Common questions</a></li>
+      <li><a href="#trouble">When something is not working</a></li>
+      <li><a href="#remove">Deleting and uninstalling</a></li>
+    </ol>
+  </nav>
+
+  <section id="help">
+    <h2>Get help</h2>
+    <p>Support is handled in a public issue tracker.</p>
+    <p><a class="button quiet" href="https://github.com/mjtpena/MikeLedger-support/issues">Open the issue tracker</a></p>
+    <p>Search first, since someone may have asked already. For a new issue, these details save a round trip:</p>
+    <ul>
+      <li>What you did, what you expected and what happened instead.</li>
+      <li>The MikeLedger version (the last line of Settings) and your Windows version.</li>
+      <li>Your PC's processor and graphics card, which Settings shows under Models.</li>
+    </ul>
+    <div class="note"><p>The tracker is public. Do not attach your documents or paste account numbers, addresses or anything else private. Describe the document instead: "an electricity bill, two pages, scanned".</p></div>
+  </section>
+
+  <section id="report">
+    <h2>Report an answer</h2>
+    <p>The answers on the Ask page, the email drafts, and the values read from your documents are written by AI models running on your PC. They can be wrong. If one is wrong in a way that matters, misleading or inappropriate, tell us:</p>
+    <ol>
+      <li>Open a <a href="https://github.com/mjtpena/MikeLedger-support/issues/new?title=Answer+report%3A+&amp;labels=answer-report">new issue</a> with a title that starts "Answer report".</li>
+      <li>Say what you asked or what kind of document it was, and what was wrong with what came back, in your own words.</li>
+      <li>Add the line under the answer that names the model (for example "phi-4-mini on GPU").</li>
+    </ol>
+    <p>Leave out names, amounts and account numbers, or change them. Every report is read. If a report shows the app producing something it should not, the fix goes into the next version and the issue says so.</p>
+    <p>Inside the app, "Report this answer" under an answer, and "Report an answer" in Settings and in the command bar (<kbd>Ctrl</kbd>+<kbd>K</kbd>), all open this page.</p>
+  </section>
+
+  <section id="start">
+    <h2>Getting started</h2>
+    <ol>
+      <li><strong>Run setup.</strong> It opens the first time you start the app. It asks where your documents land, who is in the household (optional), and then offers to download the AI models.</li>
+      <li><strong>Download the models.</strong> This is the only step that needs the internet. The size depends on your PC: between 4 and 5 GB on most, about 8 GB on a PC with a large NVIDIA graphics card. Setup shows the figure before anything is fetched. You can skip it and do it later from Settings; documents you add in the meantime are stored and read once the models arrive.</li>
+      <li><strong>Add some paperwork.</strong> Drop files on the window, save them into the inbox folder in Documents, or press <kbd>Ctrl</kbd>+<kbd>K</kbd> and choose "Add files".</li>
+      <li><strong>Look at Today.</strong> It lists what is due, what is waiting for your yes, and anything that looks wrong.</li>
+    </ol>
+    <p>To look around before adding anything of your own, open the sample household: the last step of setup offers it, and so does the command bar. It is a made-up family, already read, kept apart from your own ledger. "Exit" at the top of the window takes you back.</p>
+  </section>
+
+  <section id="keys">
+    <h2>Getting around</h2>
+    <p>There are no menus. The pages are the tabs along the top, and everything else is in the command bar.</p>
+    <table>
+      <thead><tr><th>Key</th><th>Does</th></tr></thead>
+      <tbody>
+        <tr><td><kbd>Ctrl</kbd>+<kbd>K</kbd></td><td class="wrap-ok">The command bar: go anywhere, add files, change appearance, open Settings. Type a provider's name to open a document, or a question to ask the ledger.</td></tr>
+        <tr><td><kbd>Ctrl</kbd>+<kbd>1</kbd> to <kbd>7</kbd></td><td class="wrap-ok">Today, Documents, Bills, Money, Tax, Log, Receipt</td></tr>
+        <tr><td><kbd>↑</kbd> <kbd>↓</kbd> or <kbd>J</kbd> <kbd>K</kbd></td><td class="wrap-ok">Move from row to row</td></tr>
+        <tr><td><kbd>Enter</kbd></td><td class="wrap-ok">Open the row</td></tr>
+        <tr><td><kbd>E</kbd>, <kbd>D</kbd></td><td class="wrap-ok">On Today: do the row's main action (approve, mark paid), or dismiss it</td></tr>
+        <tr><td><kbd>Ctrl</kbd>+<kbd>,</kbd></td><td class="wrap-ok">Settings</td></tr>
+        <tr><td><kbd>Esc</kbd></td><td class="wrap-ok">Back</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="questions">
+    <h2>Common questions</h2>
+
+    <h3>Do I need an account or an internet connection?</h3>
+    <p>There is no account. The internet is needed once, to download the AI models. After that the app reads documents with the network off. The <a href="privacy.html#network">privacy policy</a> lists the few things that do connect.</p>
+
+    <h3>What can it read?</h3>
+    <p>PDFs, including scanned ones, photos and scans (PNG, JPG, TIFF, BMP, GIF), saved emails (.eml and .msg) and text files. For bank statements it reads exports in CSV, OFX and QIF. It does not connect to your bank: you download the export yourself and drop it in.</p>
+
+    <h3>Does it work outside Australia?</h3>
+    <p>It was built for Australian paperwork: dollars, GST, ABNs, and a tax year that runs from 1 July to 30 June. Australia is the only region in setup today. It may well read documents from elsewhere, but it has only been tried on Australian ones, and the tax year will not match.</p>
+
+    <h3>What kind of PC does it need?</h3>
+    <p>Windows 11, version 24H2 or later. The models run on your graphics card if it can, and on the processor if it cannot, which is slower. It has been measured on one PC, with an NVIDIA graphics card. Other PCs are given a smaller model, and Arm64 PCs have their own build that has not yet been run on Arm64 hardware. If it struggles on yours, an issue with your hardware details helps.</p>
+
+    <h3>Does it pay bills or send email?</h3>
+    <p>No. It writes drafts, reminders and calendar files and hands them to your own programs. Nothing is sent, paid or signed by the app, and a suggestion that came from an AI model always waits for your yes.</p>
+
+    <h3>How do I fix something it read wrong?</h3>
+    <p>Open the document. Every value sits beside the words it was read from, and you can correct it there. Corrections are kept, and a later re-read does not overwrite them.</p>
+
+    <h3>Why is the app still running after I close the window?</h3>
+    <p>It waits near the clock so that the overnight re-check has something to run in. Quit from its icon there, or switch that off in Settings. It does not start with Windows unless you turn that on.</p>
+
+    <h3>Is this tax advice?</h3>
+    <p>No. MikeLedger organises records and adds them up. What is deductible is a question for you or your accountant.</p>
+  </section>
+
+  <section id="trouble">
+    <h2>When something is not working</h2>
+
+    <h3>Today says "Waiting for models"</h3>
+    <p>Documents are stored but cannot be read until the models are on the PC. Open Settings, find Models, and press "Download what is missing". If a download stops part way, press it again: it picks up what is missing.</p>
+
+    <h3>Reading is paused</h3>
+    <p>MikeLedger opens your files inside a Windows container so that a booby-trapped file cannot reach your data or the network. If your PC cannot provide that container, the app stops and says so instead of reading without it. Settings, under Privacy, shows what it found and lets you choose to read without containment. That choice is yours to make, not the app's.</p>
+
+    <h3>A document shows "Review" or "Failed"</h3>
+    <p>"Review" means the app was not sure of something it read: open the document and check the marked values. "Failed" means the file could not be opened at all, which usually means it is damaged or protected with a password.</p>
+
+    <h3>Reading is slow</h3>
+    <p>On a PC without a suitable graphics card the models run on the processor, and each document takes much longer. The overnight re-check is there so that the slow work happens while you are not waiting.</p>
+
+    <h3>The download will not start</h3>
+    <p>Check that Demo mode in Settings is off (it stops every download), and that the PC is online.</p>
+  </section>
+
+  <section id="remove">
+    <h2>Deleting and uninstalling</h2>
+    <p><strong>Delete everything</strong>, at the bottom of Settings, removes every document the app holds, what was read from it, bank lines, findings, settings and logs, and destroys the encryption key first. It asks once and cannot be undone. Your original files and anything you exported are not touched.</p>
+    <p>Uninstalling MikeLedger from Windows Settings removes the app and its data folder, including the downloaded models.</p>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <span class="grow">© 2026 mjtpena</span>
+    <a href="./">MikeLedger</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="support.html">Support</a>
+  </div>
+</footer>
+</body>
+</html>

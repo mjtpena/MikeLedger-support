@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MikeLedger: a private household ledger for Windows</title>
+<meta name="description" content="MikeLedger reads your bills, receipts and letters on your own PC and turns them into reminders, calendar entries, drafts and a view of where the money goes.">
+<meta property="og:title" content="MikeLedger">
+<meta property="og:description" content="A private household ledger for Windows. Your paperwork is read on your own PC.">
+<meta property="og:image" content="https://mjtpena.github.io/MikeLedger-support/assets/social.png">
+<link rel="icon" href="assets/favicon-32.png" sizes="32x32">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site">
+  <div class="wrap">
+    <a class="mark" href="./" aria-current="page"><img src="assets/icon-64.png" alt="">MikeLedger</a>
+    <nav class="site" aria-label="Site">
+      <a href="#what">What it does</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="support.html">Support</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap hero">
+    <h1>Your household paperwork, read on your own PC.</h1>
+    <p class="lede">MikeLedger reads bills, receipts, renewals, school notices and bank statements on your computer and turns them into reminders, calendar entries, drafts and a running view of where the money goes. The documents stay where they are.</p>
+    <p>
+      <a class="button" id="store-link" href="support.html#start">How to get started</a>
+      <span class="soon" id="store-note">Coming to the Microsoft Store.</span>
+    </p>
+    <figure class="shot">
+      <img src="assets/screens/today.png" width="1920" height="1080" alt="The Today page: three things due this week, three waiting for approval, and three findings worth money.">
+      <figcaption>Today, in the built-in sample household. Everything on it is made up.</figcaption>
+    </figure>
+  </div>
+
+  <div class="wrap">
+    <section id="what">
+      <h2>What it does</h2>
+      <div class="cols">
+        <div>
+          <h3>Reads what you drop in</h3>
+          <p>A PDF, a photo of a receipt, a scan, a saved email. It works out what the document is, who sent it, what is owed and when, and shows each value beside the words it was read from.</p>
+        </div>
+        <div>
+          <h3>Tells you what needs you</h3>
+          <p>Today lists what is due this week and what is waiting for your yes: a reminder, a calendar entry, a drafted question about a renewal that jumped.</p>
+        </div>
+        <div>
+          <h3>Notices what does not add up</h3>
+          <p>Add a bank export and each payment is matched to its bill. A price that rose, a charge taken twice or a debit with no invoice shows up with its evidence.</p>
+        </div>
+        <div>
+          <h3>Answers from your own papers</h3>
+          <p>Ask "when is the electricity bill due?" and get one short answer with the lines it rests on, not a chat.</p>
+        </div>
+        <div>
+          <h3>Packs the tax year</h3>
+          <p>The Tax tab writes a ZIP for a financial year: a summary, the records, the bank lines and the original files. It organises; it does not advise.</p>
+        </div>
+        <div>
+          <h3>Stays out of the way</h3>
+          <p>No menus. Tabs along the top, a command bar on Ctrl+K, and keys for everything. It drafts, and never sends or pays.</p>
+        </div>
+      </div>
+      <figure class="shot">
+        <img src="assets/screens/document.png" width="1920" height="1080" alt="A document open beside the values read from it, each with the words it came from.">
+        <figcaption>Every value sits beside the words it was read from.</figcaption>
+      </figure>
+    </section>
+
+    <section id="private">
+      <h2>What stays on your PC</h2>
+      <p>The reading is done by AI models that run on your own hardware. Your documents are stored encrypted in the app's own folder and are not uploaded to anyone.</p>
+      <p>Two things are worth knowing before you install, and the app says both itself:</p>
+      <ul>
+        <li>The models have to be downloaded once, which is the only time the app uses the internet for itself.</li>
+        <li>The Microsoft model runtime inside the app makes brief connections to Microsoft when it starts. The app does not give it your documents to send and cannot switch that off. Airplane mode does, and everything keeps working.</li>
+      </ul>
+      <p>Files are opened inside a Windows container with no network, so a booby-trapped PDF cannot reach your data. A log in the app lists every model call and where it ran. The <a href="privacy.html">privacy policy</a> has the detail.</p>
+    </section>
+
+    <section id="need">
+      <h2>What you need</h2>
+      <ul>
+        <li>Windows 11, version 24H2 or later.</li>
+        <li>A one-time download of AI models: between 4 and 5 GB on most PCs, about 8 GB on one with a large NVIDIA graphics card.</li>
+        <li>A graphics card helps. Without one the models run on the processor, which is slower.</li>
+      </ul>
+      <div class="note"><p>MikeLedger is new. It is set up for Australian paperwork (dollars, GST, ABNs, a tax year from 1 July), it has been measured on one PC, and its Arm64 build has not yet been run on Arm64 hardware. If something does not work on yours, <a href="support.html#help">say so</a>.</p></div>
+    </section>
+  </div>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <span class="grow">© 2026 mjtpena</span>
+    <a href="./">MikeLedger</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="support.html">Support</a>
+  </div>
+</footer>
+</body>
+</html>

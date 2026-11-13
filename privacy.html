@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy policy | MikeLedger</title>
+<meta name="description" content="What MikeLedger keeps on your PC, what goes over the network, and how to delete it.">
+<link rel="icon" href="assets/favicon-32.png" sizes="32x32">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site">
+  <div class="wrap">
+    <a class="mark" href="./"><img src="assets/icon-64.png" alt="">MikeLedger</a>
+    <nav class="site" aria-label="Site">
+      <a href="./#what">What it does</a>
+      <a href="privacy.html" aria-current="page">Privacy</a>
+      <a href="support.html">Support</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="wrap">
+  <h1 class="page">Privacy policy</h1>
+  <p class="sub">MikeLedger reads your household paperwork on your own PC and keeps what it reads there. This page says what that is, and the few things that do touch the network.</p>
+  <p class="dated">Last updated: 13 November 2026</p>
+
+  <nav class="toc" aria-label="On this page">
+    <strong>On this page</strong>
+    <ol>
+      <li><a href="#short">The short version</a></li>
+      <li><a href="#covers">Who and what this covers</a></li>
+      <li><a href="#stored">What is kept on your PC</a></li>
+      <li><a href="#protected">How it is protected</a></li>
+      <li><a href="#network">What goes over the network</a></li>
+      <li><a href="#outside">What is written outside the app</a></li>
+      <li><a href="#ai">AI models and their mistakes</a></li>
+      <li><a href="#delete">Keeping and deleting</a></li>
+      <li><a href="#children">Children</a></li>
+      <li><a href="#changes">Changes to this policy</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ol>
+  </nav>
+
+  <section id="short">
+    <h2>The short version</h2>
+    <ul>
+      <li>MikeLedger has no servers and no account. Your documents are read on your PC and are not uploaded to us or to anyone else.</li>
+      <li>The app uses the internet for one thing of its own: fetching the AI models, once, when you press the download button.</li>
+      <li>The Microsoft model runtime built into the app makes brief connections to Microsoft when it starts work. MikeLedger does not hand it your documents to send, but cannot switch those connections off. Airplane mode does, and the app keeps working.</li>
+      <li>There is no advertising, no analytics and no crash reporting.</li>
+      <li>One optional feature can send text to a cloud model of your choosing. It is off until you switch it on and enter your own provider's address, it sends only an email draft with the names and numbers replaced, and it never sends a document.</li>
+      <li>Settings can delete everything the app holds. Uninstalling removes it too.</li>
+    </ul>
+  </section>
+
+  <section id="covers">
+    <h2>Who and what this covers</h2>
+    <p>MikeLedger is published by mjtpena ("we"). This policy covers the MikeLedger app for Windows, distributed through the Microsoft Store, and this website.</p>
+    <p>The app files bills, receipts, renewals, letters and bank statement exports that you give it. Everything described below happens on your PC, under your Windows account.</p>
+  </section>
+
+  <section id="stored">
+    <h2>What is kept on your PC</h2>
+    <p>The app keeps its data in one folder inside its own storage, which Windows creates for each Store app. Settings shows the exact path under "Where the ledger lives". The folder holds:</p>
+    <ul>
+      <li><strong>A copy of each document you add</strong>: PDFs, photos, scans, saved emails and text files. The original stays where it was.</li>
+      <li><strong>What was read from each one</strong>: its text, what kind of document it is, who it is from, amounts, dates, account and reference numbers, who in the household it concerns, and the words each value was read from.</li>
+      <li><strong>Bank lines</strong> from the statement exports you add, which payment matched which bill, and anything found that does not add up.</li>
+      <li><strong>What the app prepared for you</strong>: reminders, proposed calendar entries and email drafts.</li>
+      <li><strong>Your settings</strong>: the folders it watches, the first names of household members if you entered any, your region, appearance, and when the overnight re-check runs.</li>
+      <li><strong>A log of every AI model call</strong>: when it ran, which model, on which hardware, how long it took and how many tokens it used. The log holds no document text.</li>
+      <li><strong>Diagnostic logs</strong>, which hold no file names, no folder paths and no document text.</li>
+      <li><strong>The AI models</strong> themselves, which hold nothing about you.</li>
+    </ul>
+    <p>Bills, bank statements and medical letters are sensitive: this is financial and sometimes health information. It is on your PC because you put it there, it is used only to do what the app is for, and it stays there.</p>
+  </section>
+
+  <section id="protected">
+    <h2>How it is protected</h2>
+    <ul>
+      <li>Stored documents, and everything that names or describes a person, a provider or a document, are encrypted with AES-GCM. The key is protected by Windows for your Windows account (DPAPI). A few values are left unencrypted so that the app can sort and filter: dates, amounts, the kind of document, its status, counts and internal identifiers.</li>
+      <li>Files you add are opened only by small helper programs that run inside a Windows container (a Microsoft Execution Container) with no network access and no access to the app's data. The app tests that container at the start of every session. On a PC that cannot provide it, the app reads nothing until you decide in Settings whether to read without it.</li>
+      <li>Anyone who can sign in to your Windows account can open the app and see the ledger. If the PC could be lost or stolen, turn on Windows device encryption or BitLocker as well.</li>
+    </ul>
+  </section>
+
+  <section id="network">
+    <h2>What goes over the network</h2>
+    <table>
+      <thead><tr><th>What</th><th>When</th><th>Details</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="wrap-ok">Model downloads</td>
+          <td class="wrap-ok">When you press Download in first-run setup or in Settings</td>
+          <td class="wrap-ok">The AI models come from Microsoft's model catalogue through the Foundry Local runtime, the hardware acceleration components come from Microsoft, and one small search model comes from huggingface.co. The request names the file that is wanted. As with any download, the server sees your IP address. Nothing about your documents is sent.</td>
+        </tr>
+        <tr>
+          <td class="wrap-ok">The model runtime's own contact with Microsoft</td>
+          <td class="wrap-ok">Each time the runtime starts work</td>
+          <td class="wrap-ok">MikeLedger includes Microsoft's Foundry Local runtime, with its non-essential telemetry switched off. Microsoft's documentation says the runtime may still send a minimal process-information event, and measured from outside the app it makes two brief HTTPS connections to Microsoft whenever it starts, even to list the models already on disk. We have not inspected what those connections carry, and the app cannot switch them off. Demo mode in Settings stops the app's own connections but not these. Airplane mode stops them, and reading keeps working.</td>
+        </tr>
+        <tr>
+          <td class="wrap-ok">Cloud polish (optional)</td>
+          <td class="wrap-ok">Only when it is switched on, set up, and you press Polish on an email draft</td>
+          <td class="wrap-ok">Off by default. To use it you enter the address, model name and key of a cloud model you have chosen; the key is kept in the Windows Credential Locker. What is sent to that address is the draft with every name, number and address replaced by a placeholder. If the app is not sure it replaced them all, it sends nothing. A document is never sent. Every attempt, sent or refused, is listed on the Log tab. What your provider does with the text is covered by their own terms.</td>
+        </tr>
+        <tr>
+          <td class="wrap-ok">Help links</td>
+          <td class="wrap-ok">When you choose Help and support, Report an answer or Privacy policy</td>
+          <td class="wrap-ok">The page opens in your own browser. Nothing from your ledger goes with it.</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>That is the whole list. The app has no analytics, no advertising and no crash uploads, and it does not check for updates itself: the Microsoft Store updates it.</p>
+    <p><strong>Windows notifications.</strong> If you allow notifications, MikeLedger tells Windows only how many things fall due tomorrow, never what they are, because Windows keeps notifications outside the app's encryption.</p>
+  </section>
+
+  <section id="outside">
+    <h2>What is written outside the app, when you ask</h2>
+    <ul>
+      <li><strong>Calendar files and email drafts.</strong> When you add a reminder to your calendar or open a draft, the app writes a file and hands it to your own calendar or mail program. MikeLedger never sends anything. The folder those files pass through is emptied every time the app starts.</li>
+      <li><strong>Exports.</strong> The tax pack is a ZIP file saved where you choose. It holds a summary, the records, the bank lines and copies of the original documents, and it is not encrypted: keep it somewhere safe. The Receipt's numbers can be saved as CSV or JSON. A share card is an image showing an amount and a kind of bill, with no provider, person or date on it.</li>
+      <li><strong>Your inbox folder.</strong> The app watches a folder in Documents (by default "MikeLedger Inbox") and files what you save there. That folder and its files are yours; the app does not delete them.</li>
+    </ul>
+  </section>
+
+  <section id="ai">
+    <h2>AI models and their mistakes</h2>
+    <p>AI models running on your PC read your documents and write the answers and drafts you see. They can be wrong. The app checks what a model says against the page before filing it, shows every value beside the words it was read from, and marks anything it is unsure of for you to look at. It drafts, and never sends, pays or signs anything.</p>
+    <p>MikeLedger organises records. It does not give tax, legal or financial advice.</p>
+    <p>If an answer or a draft is wrong in a way that matters, or inappropriate, please <a href="support.html#report">report it</a>.</p>
+  </section>
+
+  <section id="delete">
+    <h2>Keeping and deleting</h2>
+    <ul>
+      <li>The app keeps what it holds until you delete it. Nothing expires by itself.</li>
+      <li><strong>Delete everything</strong>, in Settings, removes every document, what was read from it, bank lines, findings, settings and logs. The encryption key is destroyed first, so anything that could not be removed straight away is already unreadable. The downloaded models are kept unless you tick the box to remove them too.</li>
+      <li>Uninstalling MikeLedger removes its data folder.</li>
+      <li>Neither touches your original files, your inbox folder, or anything you exported.</li>
+    </ul>
+  </section>
+
+  <section id="children">
+    <h2>Children</h2>
+    <p>MikeLedger is a tool for the adults who run a household's paperwork and is not directed at children. If you enter a child's first name so that a school notice can be filed against it, the name is stored encrypted on your PC like everything else and goes nowhere.</p>
+  </section>
+
+  <section id="changes">
+    <h2>Changes to this policy</h2>
+    <p>If a later version of the app changes what is stored or what touches the network, this page will change before that version is released, and the date at the top will change with it.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Questions about this policy go to the public issue tracker: <a href="https://github.com/mjtpena/MikeLedger-support/issues">github.com/mjtpena/MikeLedger-support/issues</a>. It is public, so do not post documents, account numbers or other personal details there.</p>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <span class="grow">© 2026 mjtpena</span>
+    <a href="./">MikeLedger</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="support.html">Support</a>
+  </div>
+</footer>
+</body>
+</html>
